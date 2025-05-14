@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Para que el ancho y el alto de los elementos incluyan padding y border*/
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased; /*Mejora la legibilidad de fuentes en navegadores web*/
+  -moz-osx-font-smoothing: grayscale; /*Mejora la legibilidad de fuentes en navegadores web*/
+  background-color: #F9FAFB;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; /*Fuente monoespaciada para código*/
+}
+
+a {
+  text-decoration: none; /*Elimina el subrayado de los enlaces*/
+  color: inherit; /*Hereda el color del texto (del body)*/
+}
+
+img {
+  max-width: 100%; /*Asegura que la imagen no se desborde del contenedor*/
+  height: auto; /*Mantiene la proporción de la imagen*/
+}
+
+button {
+  cursor: pointer; /*Cambia el cursor a mano al pasar por encima del botón*/
+}
+
+input, textarea, button {
+  font-family: inherit; /*Hereda la fuente del elemento padre (body)*/
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in; /*Animación de entrada suave*/
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar { /*Estética mejorada para scrollbar, solo visible en navegadores webkit como Chrome, Edge, Safari*/
+  width: 8px; /*Ancho de la barra de desplazamiento*/
+  height: 8px; /*Altura de la barra de desplazamiento*/
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /*Color de fondo de la barra de desplazamiento*/
+  border-radius: 4px; /*Bordes redondeados*/
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /*Color de la barra de desplazamiento*/
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /*Color de la barra de desplazamiento al pasar el cursor por encima*/
+} 
