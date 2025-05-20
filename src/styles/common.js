@@ -127,15 +127,15 @@ export const hoverStyles = {
 // Estilos de listas
 export const listStyles = {
   item: {
-    py: 0.5,
-    px: 0
+    py: 0.5, // padding vertical (top + bottom): 0.5 * 8px = 4px. A cada item de la lista se le agrega un padding vertical de 4px.
+    px: 0 // padding horizontal (left + right): 0. A cada item de la lista se le agrega un padding horizontal de 0.
   },
   text: {
-    display: 'flex',
-    alignItems: 'center',
-    '& .MuiTypography-root': {
-      mr: 1,
-      color: 'text.secondary'
+    display: 'flex', // pone el contenido (clave y valor) en la misma linea
+    alignItems: 'center', //alinea verticalmente ambos textos en el centro
+    '& .MuiTypography-root': { //a todos los Typography dentro del Box se les aplica el siguiente estilo
+      mr: 1, //margin right: 8px, para separar la clave del valor
+      color: 'text.secondary' //usa el color secundario del tema para el texto
     }
   }
 };

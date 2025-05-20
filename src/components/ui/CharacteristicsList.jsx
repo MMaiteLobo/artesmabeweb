@@ -28,3 +28,4 @@ function CharacteristicsList({ characteristics }) { /*Recibe un objeto character
 }
 
 export default CharacteristicsList; 
+

@@ -17,7 +17,7 @@ import {
   Menu,
   MenuItem
 } from '@mui/material';
-import { Menu as MenuIcon, Close as CloseIcon, ShoppingCart, KeyboardArrowDown } from '@mui/icons-material';
+import { Menu as MenuIcon, Close as CloseIcon, ShoppingCart } from '@mui/icons-material';
 import Cart from './Cart';
 import { useCart } from '../context/CartContext';
 import logo from '../assets/logo-mabe.svg';
@@ -42,10 +42,6 @@ function Navbar() {
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
-  };
-
-  const handleDrawerMouseLeave = () => {
-    setMobileOpen(false);
   };
 
   const handleMenuItemClick = (section) => {
@@ -79,7 +75,7 @@ function Navbar() {
       if (element) {
         const navbarHeight = 64; // Altura del navbar
         const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+        const offsetPosition = elementPosition + window.scrollY - navbarHeight;
 
         window.scrollTo({
           top: offsetPosition,
@@ -312,7 +308,7 @@ function Navbar() {
           keepMounted: true,
         }}
         sx={{
-          display: { xs: 'block', sm: 'none' },
+          display: { xs: 'block', md: 'none' },
           '& .MuiDrawer-paper': {
             boxSizing: 'border-box',
             width: 240,

@@ -15,7 +15,6 @@ import Contact from './Contact';
 import mobileBg from '../assets/home_fondo1-mobile.png';
 import desktopBg from '../assets/home_fondo1-desktop.png';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import { useEffect } from 'react';
 
@@ -38,7 +37,7 @@ export const Home = () => {
       if (element) {
         const navbarHeight = 64;
         const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+        const offsetPosition = elementPosition + window.scrollY - navbarHeight;
 
         window.scrollTo({
           top: offsetPosition,
