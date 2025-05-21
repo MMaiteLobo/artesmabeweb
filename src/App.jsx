@@ -7,20 +7,23 @@ import { About } from './components/About';
 import Custom from './components/Custom';
 import Contact from './components/Contact';
 import FloatingButtons from './components/FloatingButtons';
+import { FloatingButtonsProvider } from './context/FloatingButtonsContext';
 
 function App() {
   return (
-    <Box sx={{ position: 'relative', minHeight: '100vh' }}> 
-      <Navbar /> 
-      <Routes> 
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<ProductList />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/custom" element={<Custom />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <FloatingButtons /> 
-    </Box>
+    <FloatingButtonsProvider>
+      <Box sx={{ position: 'relative', minHeight: '100vh' }}> 
+        <Navbar /> 
+        <Routes> 
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/custom" element={<Custom />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <FloatingButtons /> 
+      </Box>
+    </FloatingButtonsProvider>
   );
 }
 

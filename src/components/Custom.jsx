@@ -63,21 +63,43 @@ function Custom() {
 
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={12} md={6}>
-            <Typography variant="h4" color="text.primary" gutterBottom>
+            <Typography 
+              variant="h4" 
+              color="text.primary" 
+              gutterBottom
+              sx={{ textAlign: { xs: 'center', md: 'left' } }}
+            >
               Diseños Únicos a tu Medida
             </Typography>
             
-            <Typography variant="body1" paragraph sx={{ color: 'text.secondary' }}>
+            <Typography 
+              variant="body1" 
+              paragraph 
+              sx={{ 
+                color: 'text.secondary',
+                textAlign: { xs: 'center', md: 'left' }
+              }}
+            >
               ¿Tienes una idea especial en mente? En Artes Mabe creamos piezas personalizadas 
               adaptadas a tus necesidades y preferencias. Cada proyecto es único y recibe 
               nuestra total atención y dedicación.
             </Typography>
 
-            <Typography variant="h6" gutterBottom sx={{ mt: 4, color: 'text.secondary' }}>
+            <Typography 
+              variant="h5" 
+              gutterBottom 
+              sx={{ 
+                mt: 4, 
+                color: 'text.primary',
+                textAlign: { xs: 'center', md: 'left' },
+                fontWeight: 600,
+                mb: 2
+              }}
+            >
               Proceso de Pedido:
             </Typography>
             
-            <List>
+            <List sx={{ textAlign: { xs: 'center', md: 'left' } }}>
               {[
                 'Contáctanos con tu idea',
                 'Discutimos detalles, materiales y medidas',
@@ -90,6 +112,7 @@ function Custom() {
                   sx={{ 
                     py: 0.5,
                     px: 0,
+                    justifyContent: { xs: 'center', md: 'flex-start' },
                     '&:hover': {
                       backgroundColor: 'transparent',
                       cursor: 'default'
@@ -98,8 +121,25 @@ function Custom() {
                 >
                   <ListItemText
                     primary={
-                      <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-                        <Box component="span" sx={{ color: 'primary.main', fontWeight: 'bold', mr: 1 }}>
+                      <Typography 
+                        variant="body1" 
+                        sx={{ 
+                          color: 'text.secondary',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: { xs: 'center', md: 'flex-start' },
+                          gap: 1
+                        }}
+                      >
+                        <Box 
+                          component="span" 
+                          sx={{ 
+                            color: 'primary.main', 
+                            fontWeight: 'bold',
+                            minWidth: '24px',
+                            textAlign: 'center'
+                          }}
+                        >
                           {index + 1}.
                         </Box>
                         {step}
@@ -117,23 +157,25 @@ function Custom() {
               ))}
             </List>
 
-            <Button
-              variant="contained"
-              size="large"
-              startIcon={<Message />}
-              href="https://wa.me/5491167924239?text=¡Hola! Me gustaría solicitar un pedido personalizado. ¿Podrías ayudarme?"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ 
-                mt: 4,
-                bgcolor: 'primary.main',
-                '&:hover': {
-                  bgcolor: 'primary.dark'
-                }
-              }}
-            >
-              Solicitar Pedido Personalizado
-            </Button>
+            <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+              <Button
+                variant="contained"
+                size="large"
+                startIcon={<Message />}
+                href="https://wa.me/5491167924239?text=¡Hola! Me gustaría solicitar un pedido personalizado. ¿Podrías ayudarme?"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ 
+                  mt: 4,
+                  bgcolor: 'primary.main',
+                  '&:hover': {
+                    bgcolor: 'primary.dark'
+                  }
+                }}
+              >
+                Solicitar Pedido Personalizado
+              </Button>
+            </Box>
           </Grid>
 
           <Grid item xs={12} md={6}>

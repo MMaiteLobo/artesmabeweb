@@ -10,7 +10,8 @@ const Footer = () => {
         mt: 'auto',
         bgcolor: 'background.paper',
         borderTop: '1px solid',
-        borderColor: 'divider'
+        borderColor: 'divider',
+        pb: { xs: 8, md: 3 }
       }}
     >
       <Container maxWidth="lg">

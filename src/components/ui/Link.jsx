@@ -1,18 +1,20 @@
+import { useScrollTo } from '../../hooks/useScrollTo';
+
 export const Link = ({ 
     href, 
     children,
     isActive = false,
     onClick
 }) => {
+    const { scrollToElement } = useScrollTo();
+
     return (
       <a
         href={href}
         onClick={(e) => {
             e.preventDefault();
-            const element = document.querySelector(href);
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
-            }
+            const elementId = href.replace('#', '');
+            scrollToElement(elementId, 64); // 64px es la altura del navbar
             if (onClick) onClick();
           }}
           className={`relative font-medium text-sm transition-colors duration-300 

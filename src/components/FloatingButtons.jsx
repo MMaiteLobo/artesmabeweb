@@ -1,12 +1,22 @@
 import { IconButton, Box } from '@mui/material';
 import { WhatsApp, KeyboardArrowUp } from '@mui/icons-material';
 import { useScrollTrigger } from '@mui/material';
+import { useLocation } from 'react-router-dom';
+import { useFloatingButtons } from '../context/FloatingButtonsContext';
+import { useScrollTo } from '../hooks/useScrollTo';
 
 const FloatingButtons = () => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
   });
+
+  const location = useLocation();
+  const isProductDetail = location.pathname === '/products' && location.state?.product;
+  const { isVisible } = useFloatingButtons();
+  const { scrollToTop } = useScrollTo();
+
+  if (isProductDetail || !isVisible) return null;
 
   return (
     <Box sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 9999 }}>
@@ -41,7 +51,7 @@ const FloatingButtons = () => {
       {/* Back to Top Button */}
       {trigger && (
         <IconButton
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={scrollToTop}
           sx={{
             position: 'fixed',
             bottom: 16,

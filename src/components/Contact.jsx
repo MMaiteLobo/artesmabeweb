@@ -48,15 +48,30 @@ function Contact() {
         <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} md={6}>
             <Paper elevation={3} sx={{ p: 4, height: '100%' }}>
-              <Typography variant="h5" gutterBottom color="primary.main">
+              <Typography 
+                variant="h5" 
+                gutterBottom 
+                color="primary.main"
+                sx={{ textAlign: { xs: 'center', md: 'left' } }}
+              >
                 ¡Conectemos!
               </Typography>
-              <Typography variant="body1" paragraph color="text.secondary">
+              <Typography 
+                variant="body1" 
+                paragraph 
+                color="text.secondary"
+                sx={{ textAlign: { xs: 'center', md: 'left' } }}
+              >
                 Estoy disponible para responder tus consultas y ayudarte a encontrar
                 la pieza perfecta para tu hogar.
               </Typography>
 
-              <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center', gap: 2 }}>
+              <Box sx={{ 
+                mt: 4, 
+                display: 'flex', 
+                justifyContent: 'center', 
+                gap: 2 
+              }}>
                 <IconButton
                   href="https://instagram.com/artes.mabe"
                   target="_blank"

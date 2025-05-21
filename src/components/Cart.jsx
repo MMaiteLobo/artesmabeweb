@@ -38,10 +38,24 @@ function Cart({ open, onClose }) {
       open={open}
       onClose={onClose}
       PaperProps={{
-        sx: { width: { xs: '100%', sm: 400 } }
+        sx: { 
+          width: { xs: '100%', sm: 400 },
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          zIndex: 10000
+        }
+      }}
+      sx={{
+        zIndex: 10000
       }}
     >
-      <Box sx={{ p: 2 }}>
+      <Box sx={{ 
+        p: 2,
+        flex: 1,
+        overflow: 'auto',
+        WebkitOverflowScrolling: 'touch'
+      }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
           <Typography variant="h6">Carrito de Compras</Typography>
           <IconButton onClick={onClose}>

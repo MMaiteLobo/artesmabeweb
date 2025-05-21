@@ -56,7 +56,8 @@ export const About = () => {
                 mb: 3,
                 fontSize: '1.1rem',
                 lineHeight: 1.8,
-                color: 'text.secondary'
+                color: 'text.secondary',
+                textAlign: { xs: 'center', md: 'left' }
               }}
             >
               Soy una artesana apasionada por el arte textil. Cada pieza que creo está hecha con amor y dedicación, utilizando técnicas tradicionales y materiales naturales de la más alta calidad.
@@ -67,7 +68,8 @@ export const About = () => {
                 mb: 3,
                 fontSize: '1.1rem',
                 lineHeight: 1.8,
-                color: 'text.secondary'
+                color: 'text.secondary',
+                textAlign: { xs: 'center', md: 'left' }
               }}
             >
               Mi objetivo es preservar las técnicas artesanales mientras creo piezas únicas y modernas que aporten calidez y estilo a tu hogar.
